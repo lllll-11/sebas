@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fisica</title>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+
+    <script>
+        function resolveVectors() {
+            var magnitude1 = parseFloat(document.getElementById('magnitude1').value);
+            var angle1 = parseFloat(document.getElementById('angle1').value);
+            var magnitude2 = parseFloat(document.getElementById('magnitude2').value);
+            var angle2 = parseFloat(document.getElementById('angle2').value);
+
+            var canvas = document.getElementById('canvas');
+            var ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            var vector1X = magnitude1 * Math.cos(angle1 * Math.PI / 180);
+            var vector1Y = magnitude1 * Math.sin(angle1 * Math.PI / 180);
+
+            var vector2X = magnitude2 * Math.cos(angle2 * Math.PI / 180);
+            var vector2Y = magnitude2 * Math.sin(angle2 * Math.PI / 180);
+
+            ctx.beginPath();
+            ctx.moveTo(canvas.width / 2, canvas.height / 2);
+            ctx.lineTo(canvas.width / 2 + vector1X, canvas.height / 2 - vector1Y);
+            ctx.strokeStyle = 'red';
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(canvas.width / 2, canvas.height / 2);
+            ctx.lineTo(canvas.width / 2 + vector2X, canvas.height / 2 - vector2Y);
+            ctx.strokeStyle = 'blue';
+            ctx.stroke();
+
+            var resultantX = vector1X + vector2X;
+            var resultantY = vector1Y + vector2Y;
+
+            ctx.beginPath();
+            ctx.moveTo(canvas.width / 2, canvas.height / 2);
+            ctx.lineTo(canvas.width / 2 + resultantX, canvas.height / 2 - resultantY);
+            ctx.strokeStyle = 'green';
+            ctx.stroke();
+        }    
+          </script>
+    <h1>jesus sebastian cabrera medero</h1>
+    <label for="magnitude1">longitud del vector 1:</label>
+    <input type="number" id="magnitude1"><br><br><br>
+    <label for="angle1">Ángulo del vector 1 :</label>
+    <input type="number" id="angle1"°><br><br><br>
+    <label for="magnitude2">longitud del vector 2:</label>
+    <input type="number" id="magnitude2"><br><br><br>
+    <label for="angle2">Ángulo del vector 2 :</label>
+    <input type="number" id="angle2"><br><br><br>
+    <button onclick="resolveVectors()"><h3>resolver</h3></button><br><br>
+    <canvas id="canvas"></canvas>
+    
+
+
+</body>
+</html>
