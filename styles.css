@@ -1,39 +1,48 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #8d0000;
-    text-align: center;
-}
-h1 {
-    color: #000000;
-    text-align: center;
-}
-label {
-    color: #ffffff;
-}
-input[type="number"] {
-    width: 100px;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-button {
-    padding: 10px 50px;
-    background-color: #8977f0;
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #244dff;
-}
-#canvas {
+    background-color: #e6a1ec;
+    margin: 0;
+    padding: 0;
     display: block;
-    margin: 0 auto;
-    width: 500px;
-    height: 500px;
-    border: 1px solid #ffffff;
+    justify-content: right;
+    align-items: left;
+    height: 100vh;
 }
 
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    width: 150px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: #333;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+canvas {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
